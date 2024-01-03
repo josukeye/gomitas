@@ -9,10 +9,31 @@
 /*Hack para que se mire bien en cualquier pantalla, 1rem = 10px adaptados a los parametros que le dimos */
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 body{
     font-size: 16px;
     font-family: 'Rubik', sans-serif;;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
 }
 
 header h1{
@@ -23,7 +44,6 @@ header h1{
 
 .titulo{
     text-align: center;
-    font-size: 3.8rem;
     color: var(--amarillo);
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
@@ -37,7 +57,7 @@ header h1{
 .navegacion-principal{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-bg{
@@ -55,10 +75,35 @@ header h1{
     background: var(--naranja);
 }
 
+.gomi{
+    background-image: url(../img/gom.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+
+.contenido-gomi{
+    position: absolute;
+    background-color: rgba(0, 0, 0,.6);
+    width: 100%;
+    height: 100%;
+
+    /** Para alinear en el centro el contenido **/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-gomi h2,
+.contenido-gomi p{
+    color: var(--blanco);
+}
+
 @media (min-width: 768px) {
     .navegacion-principal{
         flex-direction: row;
+        justify-content: space-between;
     }
 }
-
-joto
